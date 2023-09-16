@@ -7,3 +7,10 @@
 * @return сумма чисел
 */
 long long Problem_1( const int value_, const int* multiples_);
+
+/*
+* @breaf Найди сумму чётных элементов фибаначи не превышающих 4000000
+* @param value_: число фибаначи, меньше котрого ищем сумму
+* @return сумма чисел
+*/
+unsigned long long Problem_2(const unsigned int value_);

@@ -18,3 +18,26 @@ unsigned long long Problem_1(const int value_, const int* multiples_, const unsi
 	}
 	return sum;
 }
+
+
+
+unsigned long long Problem_2(const unsigned int value_)
+{
+	unsigned long long sum = 0;
+	unsigned int fib1 = 1;
+	unsigned int fib2 = 2;
+
+	while (fib2 < value_)
+	{
+		if (fib2 % 2 == 0)
+		{
+			sum += fib2;
+		}
+
+		unsigned int prom = fib1;
+		fib1 = fib2;
+		fib2 = fib1 + prom;
+	}
+
+	return sum;
+}
