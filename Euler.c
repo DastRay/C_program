@@ -1,6 +1,9 @@
+#include<stdio.h>
+#include<math.h>
+
 #include "Euler.h"
 
-unsigned long long Problem_1(const int value_, const int* multiples_, const unsigned int size_)
+unsigned long long Problem_1(const unsigned int value_, const int* multiples_, const unsigned int size_)
 {
 	unsigned long long sum = 0;
 
@@ -51,26 +54,31 @@ unsigned long long Problem_3(const unsigned long long value_)
 
 	while (del_ < value_)
 	{
-		if (value_ % del_ == 0) 
+		if (value_ % del_ == 0)
 		{
 			if (prime(del_) == 1)
 			{
-				
+
 				delmax_ = del_;
-				printf("%d\n", delmax_);
-				
+				printf("%llu\n", delmax_);
+
 			}
-			
+
 		}
 		del_ += 1;
 	}
 	return delmax_;
-	
+
 }
 
 int prime(unsigned long long int x)
 {
-	for (unsigned long long int i = 2; i * i <= x; i++)
-		if (x % i == 0) return 0;
+	if (x % 2 == 0)
+		return 0;
+
+	for (unsigned int n = 3; n < sqrt((double)x) + 1; n += 2)
+		if (x % n == 0)
+			return 0;
+
 	return 1;
 }

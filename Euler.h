@@ -6,7 +6,7 @@
 * @param multipies_: массив кратных чисел
 * @return сумма чисел
 */
-long long Problem_1( const int value_, const int* multiples_);
+unsigned long long Problem_1(const unsigned int value_, const int* multiples_, const unsigned int size_);
 
 /*
 * @breaf Найди сумму чётных элементов фибаначи не превышающих 4000000
@@ -14,3 +14,5 @@ long long Problem_1( const int value_, const int* multiples_);
 * @return сумма чисел
 */
 unsigned long long Problem_2(const unsigned int value_);
+
+unsigned long long Problem_3(const unsigned long long value_);
