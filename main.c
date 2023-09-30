@@ -21,11 +21,17 @@ int main()
 	printf("answer = %llu\n", Problem_1(value, array, SIZE));
 	*/
 	
-	int value = 0;
+	/*int value = 0;
 	printf("value = ");
 	scanf_s("%d", &value);
 
-	printf("answer = %llu\n", Problem_2(value));
+	printf("answer = %llu\n", Problem_2(value));*/
+
+	long long value_ = 0;
+	printf("value = ");
+	scanf_s("%llu", &value_);
+	printf("answer = %llu\n", Problem_3(value_));
+	//600851475143  13195 
 
 	return 0;
 }

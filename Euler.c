@@ -41,3 +41,36 @@ unsigned long long Problem_2(const unsigned int value_)
 
 	return sum;
 }
+
+int prime(unsigned long long int);
+
+unsigned long long Problem_3(const unsigned long long value_)
+{
+	unsigned long long delmax_ = 0;
+	unsigned long long del_ = 1;
+
+	while (del_ < value_)
+	{
+		if (value_ % del_ == 0) 
+		{
+			if (prime(del_) == 1)
+			{
+				
+				delmax_ = del_;
+				printf("%d\n", delmax_);
+				
+			}
+			
+		}
+		del_ += 1;
+	}
+	return delmax_;
+	
+}
+
+int prime(unsigned long long int x)
+{
+	for (unsigned long long int i = 2; i * i <= x; i++)
+		if (x % i == 0) return 0;
+	return 1;
+}
