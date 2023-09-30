@@ -3,7 +3,7 @@
 
 int Mult2(int value_)
 {
-    return value_ * 2;
+	return value_ * 2;
 }
 
 

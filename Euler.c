@@ -17,12 +17,11 @@ unsigned long long Problem_1(const unsigned int value_, const int* multiples_, c
 				sum += number;
 				break;
 			}
-				
+
 		}
 	}
 	return sum;
 }
-
 
 
 unsigned long long Problem_2(const unsigned int value_)
@@ -90,3 +89,23 @@ unsigned long long Problem_4()
 	return resultmax;
 }
 
+unsigned long long Problem_5(const unsigned int value_)
+{	
+	unsigned int number = 1;
+	while (1)
+	{
+		bool flag = true;
+		for (unsigned int del = 1; del <= value_; ++del)
+		{
+			if (number % del != 0)
+			{
+				flag = false;
+				break;
+			}
+		}
+		if (flag)
+			return number;
+
+		number++;
+	}
+}

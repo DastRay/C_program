@@ -1,10 +1,8 @@
-#include<stdio.h>
+пїњ#include<stdio.h>
 #include"function.h"
 #include "Euler.h"
 
 #define SIZE 2
-
-// каждый раз когда в коде встречаетс€ N, оно будет мен€тс€ на заданое значение
 
 int main()
 {
@@ -20,7 +18,7 @@ int main()
 
 	printf("answer = %llu\n", Problem_1(value, array, SIZE));
 	*/
-	
+
 	/*int value = 0;
 	printf("value = ");
 	scanf_s("%d", &value);
@@ -33,10 +31,13 @@ int main()
 	printf("value = ");
 	scanf_s("%llu", &value_);
 	printf("answer = %llu\n", Problem_3(value_));
-	//600851475143  13195 
+	//600851475143  13195
 	*/
 
+	/*
 	printf("%llu", Problem_4());
+	*/
 
+	printf("%llu\n", Problem_5(20));
 	return 0;
 }
