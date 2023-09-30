@@ -2,6 +2,7 @@
 #include<math.h>
 
 #include "Euler.h"
+#include "function.h"
 
 unsigned long long Problem_1(const unsigned int value_, const int* multiples_, const unsigned int size_)
 {
@@ -45,7 +46,7 @@ unsigned long long Problem_2(const unsigned int value_)
 	return sum;
 }
 
-int prime(unsigned long long int);
+
 
 unsigned long long Problem_3(const unsigned long long value_)
 {
@@ -56,7 +57,7 @@ unsigned long long Problem_3(const unsigned long long value_)
 	{
 		if (value_ % del_ == 0)
 		{
-			if (prime(del_) == 1)
+			if (Prime(del_) == 1)
 			{
 
 				delmax_ = del_;
@@ -71,14 +72,21 @@ unsigned long long Problem_3(const unsigned long long value_)
 
 }
 
-int prime(unsigned long long int x)
+unsigned long long Problem_4()
 {
-	if (x % 2 == 0)
-		return 0;
-
-	for (unsigned int n = 3; n < sqrt((double)x) + 1; n += 2)
-		if (x % n == 0)
-			return 0;
-
-	return 1;
+	long long int resultmax = 0;
+	for (unsigned int n_1 = 100; n_1 < 1000; ++n_1)
+	{
+		for (unsigned int n_2 = 100; n_2 < 1000; ++n_2)
+		{
+			unsigned int mult = n_1 * n_2;
+			if (IsPalindrome(mult))
+			{
+				if (mult > resultmax)
+					resultmax = mult;
+			}
+		}
+	}
+	return resultmax;
 }
+
