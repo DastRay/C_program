@@ -38,6 +38,14 @@ int main()
 	printf("%llu", Problem_4());
 	*/
 
+	/*
 	printf("%llu\n", Problem_5(20));
+	*/
+
+	unsigned int quantity = 0;
+	printf("quantity = ");
+	scanf_s("%d", &quantity);
+	printf("answer = %d\n", Problem_6(quantity));
+
 	return 0;
 }

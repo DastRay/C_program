@@ -34,3 +34,10 @@ unsigned long long Problem_4();
 * @return искомое наименьшее положительное число
 */
 unsigned long long Problem_5(const unsigned int value_);
+
+/*
+* @breaf сумма квадратов первых n-чисел
+* @param n - количество натуральных чисел
+* @return разница между суммой квадратов и квадратом суммы 
+*/
+unsigned long long Problem_6(const unsigned int n_);
