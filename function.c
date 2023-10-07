@@ -1,5 +1,6 @@
 #include "function.h"
 #include <stdbool.h>
+#include <math.h>
 
 int Mult2(int value_)
 {

@@ -15,7 +15,7 @@ int Prime(unsigned long long int x);
 
 /*
 * @breaf функция проверки числа на палнидром
-* @param number_: чиcло, которое проверяется
+* @param number_: чичло, которое проверяется
 * @return палиндром или нет
 */
 bool IsPalindrome(const unsigned int number_);

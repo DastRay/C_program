@@ -58,17 +58,13 @@ unsigned long long Problem_3(const unsigned long long value_)
 		{
 			if (Prime(del_) == 1)
 			{
-
 				delmax_ = del_;
 				printf("%llu\n", delmax_);
-
 			}
-
 		}
 		del_ += 1;
 	}
 	return delmax_;
-
 }
 
 unsigned long long Problem_4()
@@ -90,7 +86,7 @@ unsigned long long Problem_4()
 }
 
 unsigned long long Problem_5(const unsigned int value_)
-{	
+{
 	unsigned int number = 1;
 	while (1)
 	{
@@ -111,7 +107,7 @@ unsigned long long Problem_5(const unsigned int value_)
 }
 
 unsigned long long Problem_6(const unsigned int n_)
-{	
+{
 	unsigned long long int sum_1 = 0;
 	unsigned long long int sum_2 = 0;
 

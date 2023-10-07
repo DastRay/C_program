@@ -17,8 +17,8 @@ unsigned long long Problem_2(const unsigned int value_);
 
 /*
 * @breaf найти самый большой делитель числа 600851475143, являющийся простым числом
-* @param value_: число, для которого ищем наибольший делитель
-* @return наибольший делитель
+* @param value_: число, для которого ищем наибольший делитель 
+* @return наибольший делитель 
 */
 unsigned long long Problem_3(const unsigned long long value_);
 
@@ -38,6 +38,6 @@ unsigned long long Problem_5(const unsigned int value_);
 /*
 * @breaf сумма квадратов первых n-чисел
 * @param n - количество натуральных чисел
-* @return разница между суммой квадратов и квадратом суммы 
+* @return разница между суммой квадратов и квадратом суммы
 */
 unsigned long long Problem_6(const unsigned int n_);
