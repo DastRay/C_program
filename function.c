@@ -1,6 +1,6 @@
 #include "function.h"
 #include <stdbool.h>
-#include <math.h>
+#include <string.h>
 
 int Mult2(int value_)
 {
@@ -33,4 +33,67 @@ bool IsPalindrome(const unsigned int number_)
 	}
 
 	return number_ == reverse;
+}
+
+
+unsigned int StrLen(const char* str_)
+{
+	const char* p = str_;
+	while (*p++);
+	{
+		return((p - 1) - str_);
+	}
+}
+
+void СopyStr(char* src_, char* dest_)
+{	
+	if (!src_ || !dest_)
+		return NULL;
+
+	while (*src_) 
+	{
+		*dest_ = *src_;
+		dest_++;
+		src_++;
+	}
+	*dest_ = '\0';
+}
+
+void StrCat(char* str1_, const char* str2_) 
+{
+	while (*str1_) {
+		str1_++;
+	}
+
+	while (*str2_) {
+		*str1_ = *str2_;
+		str2_++;
+		str1_++;
+	}
+	*str1_ = '\0';
+}
+
+void СompareStr(const char* str1, const char* str2) {
+	int count = 0;
+
+	while (str1[count] && (str1[count] == str2[count])) {
+		count++;
+	}
+	int res = str1[count] - str2[count];
+
+	if (res == 0) 
+	{
+		printf("Строки одинаковы\n");
+	}
+	else
+	{
+		if (res < 0)
+		{
+			printf("Первая строка меньше второй\n");
+		}
+		else
+		{
+			printf("Первая строка длиннее первой\n");
+		}
+	}
 }
