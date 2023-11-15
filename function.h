@@ -46,4 +46,11 @@ void StrCat(char* dest_, const char* src_);
 * @param str2: вторая строка 
 */
 void СompareStr(const char* str1, const char* str2);
+
+/*
+* @breaf функция считывающая одну строку из файла
+* @param file_: файл из котрого считываем строку
+* @param line_: строка
+*/
+void ReadLine(FILE* file_, char* line_);
 #endif

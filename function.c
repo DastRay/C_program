@@ -1,6 +1,7 @@
 #include "function.h"
 #include <stdbool.h>
 #include <string.h>
+#include <stdio.h>
 
 int Mult2(int value_)
 {
@@ -47,9 +48,6 @@ unsigned int StrLen(const char* str_)
 
 void ÑopyStr(char* src_, char* dest_)
 {	
-	if (!src_ || !dest_)
-		return NULL;
-
 	while (*src_) 
 	{
 		*dest_ = *src_;
@@ -97,3 +95,16 @@ void ÑompareStr(const char* str1, const char* str2) {
 		}
 	}
 }
+
+void ReadLine(FILE* file_, char* line_)
+{
+	int linelen = 0;
+
+	while (fgetc(file_) != '\n' && fgetc(file_) != EOF)
+	{
+		line_[linelen++] = fgetc(file_);
+	}
+
+	line_[linelen] = '\0';
+}
+

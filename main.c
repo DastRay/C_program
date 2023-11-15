@@ -88,9 +88,25 @@ int main()
 	*/
 
 
+	/*
 	char* str1 = "Hell";
 	char* str2 = "Hello";
 	СompareStr(str1, str2);
+	*/
+
 	
+	FILE* file;
+	errno_t err = fopen_s(&file, "file.txt", "r");
+
+	if (err != 0 || !file)
+	{
+		perror("File cant't open!");
+		return 1;
+	}
+
+	char line[255];
+	ReadLine(file, line);
+	printf("%s\n", line);
+
 	return 0;
 }
