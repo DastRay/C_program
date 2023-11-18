@@ -31,13 +31,13 @@ int main()
 	printf("answer = %llu\n", Problem_2(value));
 	*/
 
-	/*
+	
 	long long value_ = 0;
 	printf("value = ");
 	scanf_s("%llu", &value_);
 	printf("answer = %llu\n", Problem_3(value_));
 	//600851475143  13195
-	*/
+	
 
 	/*
 	printf("%llu", Problem_4());
@@ -95,6 +95,7 @@ int main()
 	*/
 
 	
+	/*
 	FILE* file;
 	errno_t err = fopen_s(&file, "file.txt", "r");
 
@@ -107,6 +108,7 @@ int main()
 	char line[255];
 	ReadLine(file, line);
 	printf("%s\n", line);
+	*/
 
 	return 0;
 }

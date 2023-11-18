@@ -1,5 +1,7 @@
 #pragma once
 #include <stdbool.h>
+#include <string.h>
+#include <stdio.h>
 
 #ifndef _FUNCTION_H_
 #define _FUNCTION_H_
