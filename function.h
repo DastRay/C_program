@@ -23,6 +23,13 @@ int Prime(unsigned long long int x);
 bool IsPalindrome(const unsigned int number_);
 
 /*
+* @breaf функция считывающая одну строку из файла
+* @param line_: строка, в которую считываем 
+* @param FILE* f_: файл, из которого считваем строку
+* @return длина строки
+*/
+int fGetLine(char* line_, FILE* f_);
+/*
 * @breaf функция подсчитывающая длину строки
 * @param str_: строка, длину которой подсчитываем 
 * @return длина строки 
@@ -54,5 +61,5 @@ void СompareStr(const char* str1, const char* str2);
 * @param file_: файл из котрого считываем строку
 * @param line_: строка
 */
-void ReadLine(FILE* file_, char* line_);
+//void ReadLine(FILE* file_, char* line_); not working
 #endif

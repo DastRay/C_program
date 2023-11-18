@@ -37,6 +37,34 @@ bool IsPalindrome(const unsigned int number_)
 }
 
 
+int fGetLine(char* line_, FILE* f_)
+{
+	{
+		char* CopyLine = line_;
+		if (f_ == NULL)
+		{
+			perror("File cant't open!");
+			return 0;
+		}
+
+		while (1)
+		{
+			char c = fgetc(f_);
+			if (c == '\n' || c == EOF)
+				break;
+			else
+			{
+				*CopyLine = c;
+				CopyLine++;
+			}
+
+		}
+		*CopyLine = '\0';
+
+		return strlen(line_); // длина считанной строки
+	}
+}
+
 unsigned int StrLen(const char* str_)
 {
 	const char* p = str_;
@@ -81,7 +109,7 @@ void СompareStr(const char* str1, const char* str2) {
 
 	if (res == 0) 
 	{
-		printf("Строки одинаковы\n");
+		printf("Длины строк равны\n");
 	}
 	else
 	{
@@ -96,6 +124,7 @@ void СompareStr(const char* str1, const char* str2) {
 	}
 }
 
+/* not working
 void ReadLine(FILE* file_, char* line_)
 {
 	int linelen = 0;
@@ -107,4 +136,5 @@ void ReadLine(FILE* file_, char* line_)
 
 	line_[linelen] = '\0';
 }
+*/
 

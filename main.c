@@ -54,10 +54,11 @@ int main()
 	printf("answer = %d\n", Problem_6(quantity));
 	*/
 
-	/*
-	char line[255];
+
+	////////////////Работа с файлами//////////////////////////////////////////////////////////////////
+
 	FILE* file;
-	errno_t err = fopen_s(&file, "file.txt", "r");
+	errno_t err = fopen_s(&file, "file.txt", "r"); // открытие файла на чтение
 
 	if (err != 0 || !file)
 	{
@@ -65,21 +66,22 @@ int main()
 		return 1;
 	}
 
+	/*
+	char line[255];
 	fgets(line, 255, file);
 	printf("%s\n", line);
 	fgets(line, 255, file);
 	printf("%s\n", line);
 	*/
-
 
 	/*
 	char SrcStr[] = "Hello, world!";
 	char DestStr[100];
 	СopyStr(SrcStr, DestStr);
 	printf("Скопированная строка: %s\n", DestStr);
-	printf("%d %d", StrLen(SrcStr));
+	printf("Длина строки: %d", StrLen(SrcStr));
 	*/
-
+	
 	/*
 	char str1[20] = "Hello, ";
 	char str2[] = "world!";
@@ -87,28 +89,26 @@ int main()
 	printf("%s\n", str1);
 	*/
 
-
+	
 	/*
 	char* str1 = "Hell";
 	char* str2 = "Hello";
 	СompareStr(str1, str2);
 	*/
-
 	
-	/*
-	FILE* file;
-	errno_t err = fopen_s(&file, "file.txt", "r");
-
-	if (err != 0 || !file)
-	{
-		perror("File cant't open!");
-		return 1;
-	}
-
+	/* function not working
 	char line[255];
 	ReadLine(file, line);
 	printf("%s\n", line);
 	*/
+
+	
+	/*
+	char line[100];
+	printf("%d\n", fGetLine(line, file)); // длина считанной строки
+	printf("%s\n", line);                 // считанная строка 
+	*/
+	
 
 	return 0;
 }
