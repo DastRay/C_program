@@ -73,6 +73,12 @@ unsigned int StrLen(const char* str_)
 		return((p - 1) - str_);
 	}
 }
+int MyStrLen(char* str_)
+{
+	int n = 0;
+	for (; str_[n]; n++);
+	return n;
+}
 
 void ÑopyStr(char* src_, char* dest_)
 {	

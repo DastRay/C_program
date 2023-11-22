@@ -31,11 +31,12 @@ int main()
 	printf("answer = %llu\n", Problem_2(value));
 	*/
 
-	
+	/*
 	long long value_ = 0;
 	printf("value = ");
 	scanf_s("%llu", &value_);
 	printf("answer = %llu\n", Problem_3(value_));
+	*/
 	//600851475143  13195
 	
 
@@ -65,7 +66,6 @@ int main()
 		perror("File cant't open!");
 		return 1;
 	}
-
 	/*
 	char line[255];
 	fgets(line, 255, file);
@@ -89,7 +89,6 @@ int main()
 	printf("%s\n", str1);
 	*/
 
-	
 	/*
 	char* str1 = "Hell";
 	char* str2 = "Hello";
@@ -102,13 +101,15 @@ int main()
 	printf("%s\n", line);
 	*/
 
-	
 	/*
 	char line[100];
 	printf("%d\n", fGetLine(line, file)); // длина считанной строки
 	printf("%s\n", line);                 // считанная строка 
 	*/
-	
+	char* str = "Hell";
+	int res = MyStrLen(str);
+	printf("%d", res);
 
 	return 0;
+
 }

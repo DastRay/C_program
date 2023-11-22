@@ -35,6 +35,13 @@ int fGetLine(char* line_, FILE* f_);
 * @return длина строки 
 */
 unsigned int StrLen(const char* str_);
+
+/*
+* @breaf функция подсчитывающая длину строки
+* @param str_: строка, длину которой подсчитываем
+* @return длина строки
+*/
+int MyStrLen(char* str_);
 /*
 * @breaf функция копирования одной строки в другую
 * @param src_: копируемая строка
