@@ -23,7 +23,7 @@ int fGetLine(char* line_, FILE* f_)
       }
       *CopyLine = '\0';
 
-      return MyStrlen(line_); // длина строки
+      return MyStrlen(line_); // РґР»РёРЅР° СЃС‚СЂРѕРєРё
    }
 }
 
@@ -80,17 +80,17 @@ void MyStrcmp(const char* str1, const char* str2)
 
    if (res == 0)
    {
-      printf("Строки равны\n");
+      printf("РЎС‚СЂРѕРєРё СЂР°РІРЅС‹\n");
    }
    else
    {
       if (res < 0)
       {
-         printf("Первая строка меньше второй\n");
+         printf("РџРµСЂРІР°СЏ СЃС‚СЂРѕРєР° РјРµРЅСЊС€Рµ РІС‚РѕСЂРѕР№\n");
       }
       else
       {
-         printf("Первая строка больше второй\n");
+         printf("РџРµСЂРІР°СЏ СЃС‚СЂРѕРєР° Р±РѕР»СЊС€Рµ РІС‚РѕСЂРѕР№\n");
       }
    }
 }
