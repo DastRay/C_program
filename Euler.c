@@ -1,6 +1,5 @@
-#include <stdio.h>
-#include <math.h>
-#include <stdlib.h>
+#include<stdio.h>
+#include<math.h>
 
 #include "Euler.h"
 #include "function.h"
@@ -50,19 +49,17 @@ unsigned long long Problem_2(const unsigned int value_)
 
 unsigned long long Problem_3(const unsigned long long value_)
 {
-	unsigned long long delmax_ = value_;
-	unsigned long long del_ = 2;
+	unsigned long long delmax_ = 0;
+	unsigned long long del_ = 1;
 
-	while (del_ < delmax_)
+	while (del_ < value_)
 	{
-		if (delmax_ % del_ == 0)
+		if (value_ % del_ == 0)
 		{
 			if (Prime(del_) == 1)
 			{
-				while (delmax_ % del_ == 0)
-				{
-					delmax_ /= del_;
-				}
+				delmax_ = del_;
+				printf("%llu\n", delmax_);
 			}
 		}
 		del_ += 1;
@@ -89,7 +86,7 @@ unsigned long long Problem_4()
 }
 
 unsigned long long Problem_5(const unsigned int value_)
-{	
+{
 	unsigned int number = 1;
 	while (1)
 	{
@@ -110,7 +107,7 @@ unsigned long long Problem_5(const unsigned int value_)
 }
 
 unsigned long long Problem_6(const unsigned int n_)
-{	
+{
 	unsigned long long int sum_1 = 0;
 	unsigned long long int sum_2 = 0;
 

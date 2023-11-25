@@ -1,6 +1,7 @@
 #include "LongNumber.h"
 #include <stdlib.h>
 
+/*
 LongNumber* Sum(const LongNumber* n_1, const LongNumber* n_2)
 {
 	LongNumber* result = malloc(sizeof(LongNumber));
@@ -23,3 +24,4 @@ LongNumber* Sum(const LongNumber* n_1, const LongNumber* n_2)
 	}
 	return result;
 }
+*/
