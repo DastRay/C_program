@@ -2,7 +2,6 @@
 
 #include <string.h>
 #include <stdio.h>
-#include <locale.h>
 
 int fGetLine(char* line_, FILE* f_)
 {
@@ -70,7 +69,6 @@ void MyStrcat(char* str1_, const char* str2_)
 
 void MyStrcmp(const char* str1, const char* str2)
 {
-   setlocale(LC_ALL, "Rus");
    int count = 0;
 
    while (str1[count] && (str1[count] == str2[count])) {
