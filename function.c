@@ -37,4 +37,3 @@ bool IsPalindrome(const unsigned int number_)
 }
 
 
-
