@@ -19,10 +19,10 @@ unsigned int MyStrlen(const char* str_);
 
 /*
 * @breaf функция копирования одной строки в другую
-* @param src_: копируемая строка
 * @param dest_: строка, в которую копируем
+* @param src_: копируемая строка
 */
-void MyStrcpy(char* src_, char* dest_);
+void MyStrcpy(char* dest_, char* src_);
 
 /*
 * @breaf функция приписывания одной строки к другой

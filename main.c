@@ -91,7 +91,7 @@ int main()
    /*
    char SrcStr[] = "Hello, world!";
    char DestStr[100];
-   MyStrcpy(SrcStr, DestStr);
+   MyStrcpy(DestStr, SrcStr);
    printf("Скопированная строка: %s\n", DestStr);
    */
 

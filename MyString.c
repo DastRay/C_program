@@ -36,7 +36,7 @@ unsigned int MyStrlen(const char* str_)
    }
 }
 
-void MyStrcpy(char* src_, char* dest_)
+void MyStrcpy(char* dest_, char* src_)
 {
    while (*src_)
    {
