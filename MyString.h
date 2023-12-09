@@ -1,5 +1,4 @@
 #pragma once
-#include <string.h>
 #include <stdio.h>
 
 /*
@@ -21,15 +20,17 @@ unsigned int MyStrlen(const char* str_);
 * @breaf функция копирования одной строки в другую
 * @param dest_: строка, в которую копируем
 * @param src_: копируемая строка
+* @return скопированная строка
 */
-void MyStrcpy(char* dest_, char* src_);
+char* MyStrcpy(char* dest_, char* src_);
 
 /*
 * @breaf функция приписывания одной строки к другой
 * @param src_: строка к которой приписываем другую строку
 * @param dest_: строка которую приписываем к другой
+* @return строка, к которой приписали другую
 */
-void MyStrcat(char* dest_, const char* src_);
+char* MyStrcat(char* str1_, const char* str2_);
 
 /*
 * @breaf функция сравнивающая две строки

@@ -1,5 +1,4 @@
 ﻿#include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 #include <locale.h>
 
@@ -70,8 +69,8 @@ int main()
    }
 
    /*
-   char* str = "Hello!";
-   printf("%d\n", MyStrlen(str));
+   char str[] = "Hello!";
+   printf("Длина строки: %d\n", MyStrlen(str));
    */
 
    /*
@@ -83,24 +82,22 @@ int main()
    /*
    char SrcStr[] = "Hello, world!";
    char DestStr[100];
-   MyStrcpy(DestStr, SrcStr);
-   printf("Скопированная строка: %s\n", DestStr);
+   printf("Скопированная строка: %s\n", MyStrcpy(DestStr, SrcStr));
    */
 
+   
    /*
    char str1[30] = "Hello, ";
    char str2[] = "world!";
-   MyStrcat(str1, str2);
-   printf("%s\n", str1);
+   printf("%s\n", MyStrcat(str1, str2));
    */
-
+   
    /*
    char* str1 = "Hella";
    char* str2 = "Hello";
    printf("%d\n", MyStrcmp(str1, str2));
    */
 
-   
    /*
    char str[] = "Строка Яя!";
    printf("Исходная строка: %s\n", str);
@@ -108,7 +105,6 @@ int main()
    printf("Измененная строка: %s\n", str);
    */
    
-
    /*
    char haystack[] = "Hello, World!";
    char needle[] = "World";

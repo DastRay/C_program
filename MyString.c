@@ -1,6 +1,5 @@
 #include "MyString.h"
 
-#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -36,8 +35,10 @@ unsigned int MyStrlen(const char* str_)
    }
 }
 
-void MyStrcpy(char* dest_, char* src_)
+char* MyStrcpy(char* dest_, char* src_)
 {
+   char* tmp = dest_;
+
    while (*src_)
    {
       *dest_ = *src_;
@@ -45,10 +46,14 @@ void MyStrcpy(char* dest_, char* src_)
       src_++;
    }
    *dest_ = '\0';
+
+   return tmp;
 }
 
-void MyStrcat(char* str1_, const char* str2_)
+char* MyStrcat(char* str1_, const char* str2_)
 {
+   char* tmp = str1_;
+
    while (*str1_) {
       str1_++;
    }
@@ -59,6 +64,8 @@ void MyStrcat(char* str1_, const char* str2_)
       str1_++;
    }
    *str1_ = '\0';
+
+   return tmp;
 }
 
 int MyStrcmp(const char* str1, const char* str2)
