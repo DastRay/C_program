@@ -72,6 +72,36 @@ int MyStrcmp(const char* str1, const char* str2)
    return str1[count] - str2[count];
 }
 
+
+char* MyStrstr(const char* string_, const char* substring_)
+{
+   char* string_copy = calloc(MyStrlen(string_), sizeof(char));
+   unsigned int count = 0;
+   char flag = 1;
+
+   for (int i = 0; i < MyStrlen(string_); i++)
+   {
+      flag = 1;
+      if (string_[i] == substring_[0])
+      {
+         for (int x = 0; substring_[x] != '\0'; x++)
+            if (string_[i + x] != substring_[x])
+               flag = 0;
+
+         if (flag == 1)
+         {
+            for (; string_[i] != '\0'; i++)
+            {
+               string_copy[count] = string_[i];
+               count++;
+            }
+            return string_copy;
+         }
+      }
+   }
+   return NULL;
+}
+
 void Replace(char* str_) 
 {
    int i = 0;
@@ -89,92 +119,3 @@ void Replace(char* str_)
       i++;
    }
 }
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-char* fGetLine1_1(char* line_, FILE* f_)
-{
-   char* copyline = line_;
-
-   while (1)
-   {
-      char c = fgetc(f_);
-      if (c == '\n' || c == EOF)
-         break;
-      else
-      {
-         *copyline = c;
-         copyline++;
-      }
-   }
-   *copyline = '\0';
-
-   return line_;
-}
-
-unsigned int MyStrlen1_1(const char* str_)
-{
-   unsigned int n = 0;
-   for (; str_[n]; n++);
-   return n;
-}
-
-void MyStrcmp1_1(const char* str1, const char* str2)
-{
-   int count = 0;
-
-   while (str1[count] && (str1[count] == str2[count])) 
-   {
-      count++;
-   }
-   int res = str1[count] - str2[count];
-
-   if (res == 0)
-   {
-      printf("Строки равны\n");
-   }
-   else
-   {
-      if (res < 0)
-      {
-         printf("Первая строка меньше второй\n");
-      }
-      else
-      {
-         printf("Первая строка больше второй\n");
-      }
-   }
-}
-
-
-/* not working
-char* fgetline(char* line_, FILE* f_)
-{
-   int linelen = 0;
-   while (!feof(f_) && fgetc(f_) != '\n')
-      linelen++;
-
-   fseek(f_, -(linelen + 2), SEEK_CUR);
-
-   char* CopyLine = malloc(linelen * sizeof(char) + 1);
-   if (!CopyLine)
-      return(NULL);
-
-   int i = 0;
-   while (1)
-   {
-      char c = fgetc(f_);
-      if (c == '\n' || c == EOF)
-         break;
-      else
-      {
-         *CopyLine = c;
-         i++;
-      }
-   }
-   *CopyLine = '\0';
-
-   return CopyLine;
-}
-*/

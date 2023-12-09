@@ -58,7 +58,7 @@ int main()
    */
 
 
-   ////////////////-----Работа с файлами-----//////////////////////////////////////////////////////////////////
+   ////////////////-----Работа с файлами и строками-----//////////////////////////////////////////////////////////////////
 
    FILE* file;
    errno_t err = fopen_s(&file, "file.txt", "r");
@@ -68,14 +68,6 @@ int main()
       perror("File cant't open!");
       return 1;
    }
-
-  /*
-  char line[255];
-  fgets(line, 255, file);
-  printf("%s\n", line);
-  fgets(line, 255, file);
-  printf("%s\n", line);
-  */
 
    /*
    char* str = "Hello!";
@@ -108,14 +100,19 @@ int main()
    printf("%d\n", MyStrcmp(str1, str2));
    */
 
+   
    /*
    char str[] = "Строка Яя!";
-
    printf("Исходная строка: %s\n", str);
-
    Replace(str);
-
    printf("Измененная строка: %s\n", str);
+   */
+   
+
+   /*
+   char haystack[] = "Hello, World!";
+   char needle[] = "World";
+   printf("%s", MyStrstr(haystack, needle));
    */
 
    return 0;

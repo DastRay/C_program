@@ -41,28 +41,16 @@ void MyStrcat(char* dest_, const char* src_);
 */
 int MyStrcmp(const char* str1, const char* str2);
 
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-/*
-* @breaf функция считывающая одну строку из файла
-* @param line_: строка, в которую считываем
-* @param FILE* f_: файл, из которого считваем строку
-* @return считанная строка
+/**
+ * @brief Функция ищет подстроку substring_ в строке string_
+ * @param string_ строка в которой ищем вхождение
+ * @param substring_ строка которую ищем
+ * @return вся оставшаяся строка string_, начиная с первого вхождения строки substring_ или NULL если вхождения строки не нашлось 
 */
-char* fGetLine1_1(char* line_, FILE* f_);
+char* MyStrstr(const char* string_, const char* substring_);
 
-/*
-* @breaf функция подсчитывающая длину строки
-* @param str_: строка, длину которой подсчитываем
-* @return количество символов в строке до первого вхождения символа конца строки
+/**
+ * @brief функция заменяет каждый символ строки str_ следующим по коду символом, букву "я" заменяет пробелом
+ * @param str_ строка в которой заменяем символы
 */
-unsigned int MyStrlen1_1(char* str_);
-
-/*
-* @breaf функция сравнивающая две строки
-* @param str1: первая строка
-* @param str2: вторая строка
-*/
-void MyStrcmp1_1(const char* str1, const char* str2);
+void Replace(char* str_);
