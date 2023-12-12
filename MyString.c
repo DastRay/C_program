@@ -91,8 +91,8 @@ char* MyStrstr(const char* string_, const char* substring_)
       flag = 1;
       if (string_[i] == substring_[0])
       {
-         for (int x = 0; substring_[x] != '\0'; x++)
-            if (string_[i + x] != substring_[x])
+         for (int j = 0; substring_[j] != '\0'; j++)
+            if (string_[i + j] != substring_[j])
                flag = 0;
 
          if (flag == 1)

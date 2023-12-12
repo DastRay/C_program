@@ -73,11 +73,11 @@ int main()
    printf("Длина строки: %d\n", MyStrlen(str));
    */
 
-   /*
-   char line[100];
+   
+   /*char line[100];
    printf("Количество считанных символов: %d\n", fGetLine(line, file));
-   printf("Считанная строка: %s\n", line);
-   */
+   printf("Считанная строка: %s\n", line);*/
+   
 
    /*
    char SrcStr[] = "Hello, world!";
@@ -105,11 +105,11 @@ int main()
    printf("Измененная строка: %s\n", str);
    */
    
-   /*
-   char haystack[] = "Hello, World!";
+   
+   /*char haystack[] = "Hello, World!";
    char needle[] = "World";
-   printf("%s", MyStrstr(haystack, needle));
-   */
+   printf("%s", MyStrstr(haystack, needle));*/
+   
 
    return 0;
 }
