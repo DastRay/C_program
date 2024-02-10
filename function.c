@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 
 int Mult2(int value_)
@@ -87,4 +88,32 @@ unsigned int countOfDivisors_1(const int number)
    }
 
    return count;
+}
+
+
+char* addStrings(char* num1, char* num2)
+{
+   int n1 = strlen(num1) - 1;
+   int n2 = strlen(num2) - 1;
+   int carry = 0, sum = 0;
+   int maxLen = (n1 > n2) ? n1 : n2;
+
+   char* result = (char*)malloc(sizeof(char) * (maxLen + 3));
+   int i = maxLen + 1;
+   result[i + 1] = '\0';
+
+   while (n1 >= 0 || n2 >= 0)
+   {
+      int d1 = (n1 >= 0) ? num1[n1--] - '0' : 0;
+      int d2 = (n2 >= 0) ? num2[n2--] - '0' : 0;
+      sum = d1 + d2 + carry;
+      result[i--] = sum % 10 + '0';
+      carry = sum / 10;
+   }
+
+   if (carry) {
+      result[i--] = carry + '0';
+   }
+
+   return &result[i + 1];
 }

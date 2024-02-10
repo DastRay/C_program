@@ -42,4 +42,12 @@ unsigned int countOfDivisors(const int number);
  * @return количество делителей числа
 */
 unsigned int countOfDivisors_1(const int number);
+
+/**
+ * @brief функция для сложения чисел
+ * @param num1 первое число 
+ * @param num2 второе число
+ * @return сумма двух чисел
+*/
+char* addStrings(char* num1, char* num2);
 #endif

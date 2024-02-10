@@ -76,3 +76,6 @@ unsigned long long int Problem_10(const unsigned long long int number);
  * @return первое треугольное число, у которого более n делителей
  */
 unsigned long long int Problem_12(const int num_div);
+
+
+void Problem_13();
