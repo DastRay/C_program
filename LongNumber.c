@@ -1,7 +1,6 @@
 #include "LongNumber.h"
 #include <stdlib.h>
 
-/*
 LongNumber* Sum(const LongNumber* n_1, const LongNumber* n_2)
 {
 	LongNumber* result = malloc(sizeof(LongNumber));
@@ -13,15 +12,14 @@ LongNumber* Sum(const LongNumber* n_1, const LongNumber* n_2)
 	else
 		result->digits = malloc(sizeof(n_2->lenght));
 
-	unsigned int sub = n_1->lenght - n_2->lenght; // ÓÚÌËÏ‡ÂÏ ÔÂ‚Û˛ ‰ÎËÌÛ ÓÚ ‚ÚÓÓÈ
-	for (unsigned int i = n_2->lenght; i > 0; --i) // Ë‰∏Ï ÓÚ ÔÓÒÎÂ‰ÌÂ„Ó ˜ËÒÎ‡ ‚ Ï‡ÒÒË‚Â Í ÔÂ‚ÓÏÛ
+	unsigned int sub = n_1->lenght - n_2->lenght; // –æ—Ç–Ω–∏–º–∞–µ–º –ø–µ—Ä–≤—É—é –¥–ª–∏–Ω—É –æ—Ç –≤—Ç–æ—Ä–æ–π
+	for (unsigned int i = n_2->lenght; i > 0; --i) // –∏–¥—ë–º –æ—Ç –ø–æ—Å–ª–µ–¥–Ω–µ–≥–æ —á–∏—Å–ª–∞ –≤ –º–∞—Å—Å–∏–≤–µ –∫ –ø–µ—Ä–≤–æ–º—É
 	{
-		unsigned int sum = n_1->digits[i + sub] + n_2->digits[i]; // ÒÛÏÏ‡ ˜ËÒÂÎ ‚ Ï‡ÒÒË‚Â Ò Ó‰ËÌ‡ÍÓ‚˚ÏË ËÌ‰ÂÍÒ‡ÏË
+		unsigned int sum = n_1->digits[i + sub] + n_2->digits[i]; // —Å—É–º–º–∞ —á–∏—Å–µ–ª –≤ –º–∞—Å—Å–∏–≤–µ —Å –æ–¥–∏–Ω–∞–∫–æ–≤—ã–º–∏ –∏–Ω–¥–µ–∫—Å–∞–º–∏
 		unsigned int q1 = sum / 10;
-		unsigned int q2 = sum % 10; // ÒÛÏÏ‡ 2 ˜ËÒÂÎ
-		result->digits[i] = q2; // ÔËÒ‚‡Â‚‡ÂÏ ÒÛÏÏÛ Í ˝ÎÂÏÂÌÚÛ (ÍÓÚÓ˚È Ï˚ ‚ÁˇÎË)
-		n_1->digits[i + sub + 1] += q1; //ÂÒÎË ÒÛÏÏ‡ ‰‚Ûı ˜ËÒÂÎ >= 10, ÚÓ ÔË·‡‚ÎˇÂÏ Í ÒÎÂ‰Û˛˘ÂÏÛ ˝ÎÂÏÂÌÚÛ ‚ Ï‡ÒÒË‚Â(˜ËÒÎÓ 10)
+		unsigned int q2 = sum % 10; // —Å—É–º–º–∞ 2 —á–∏—Å–µ–ª
+		result->digits[i] = q2; // –ø—Ä–∏—Å–≤–∞–µ–≤–∞–µ–º —Å—É–º–º—É –∫ —ç–ª–µ–º–µ–Ω—Ç—É (–∫–æ—Ç–æ—Ä—ã–π –º—ã –≤–∑—è–ª–∏)
+		n_1->digits[i + sub + 1] += q1; //–µ—Å–ª–∏ —Å—É–º–º–∞ –¥–≤—É—Ö —á–∏—Å–µ–ª >= 10, —Ç–æ –ø—Ä–∏–±–∞–≤–ª—è–µ–º –∫ —Å–ª–µ–¥—É—é—â–µ–º—É —ç–ª–µ–º–µ–Ω—Ç—É –≤ –º–∞—Å—Å–∏–≤–µ(—á–∏—Å–ª–æ 10)
 	}
 	return result;
 }
-*/

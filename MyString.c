@@ -4,8 +4,9 @@
 #include <stdlib.h>
 
 
+
 unsigned int fGetLine(char* line_, FILE* f_)
-{  
+{
    unsigned int linelen = 0;
    char* copyline = line_;
 
@@ -72,7 +73,7 @@ int MyStrcmp(const char* str1, const char* str2)
 {
    int count = 0;
 
-   while (str1[count] && (str1[count] == str2[count])) 
+   while (str1[count] && (str1[count] == str2[count]))
    {
       count++;
    }
@@ -109,17 +110,17 @@ char* MyStrstr(const char* string_, const char* substring_)
    return NULL;
 }
 
-void Replace(char* str_) 
+void Replace(char* str_)
 {
    int i = 0;
 
-   while (str_[i] != '\0') 
+   while (str_[i] != '\0')
    {
-      if (str_[i] == 'ÿ' || str_[i] == 'ß')
+      if (str_[i] == 'Ñ' || str_[i] == 'Ğ¯')
       {
          str_[i] = ' ';
       }
-      else 
+      else
       {
          str_[i] = str_[i] + 1;
       }

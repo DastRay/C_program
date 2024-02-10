@@ -36,4 +36,55 @@ bool IsPalindrome(const unsigned int number_)
    return number_ == reverse;
 }
 
+bool isPrime(int num)
+{
+   if (num < 2)
+   {
+      return false;
+   }
 
+   for (unsigned int i = 2; i * i <= num; i++)
+   {
+      if (num % i == 0)
+      {
+         return false;
+      }
+   }
+
+   return true;
+}
+
+unsigned int countOfDivisors(const int number)
+{
+   unsigned int count = 0;
+
+   for (unsigned int i = 1; i * i <= number; i++)
+   {
+      if (number % i == 0)
+      {
+         count += 2;
+      }
+
+      if (i * i == number)
+      {
+         count--;
+      }
+   }
+
+   return count;
+}
+
+unsigned int countOfDivisors_1(const int number)
+{
+   unsigned int count = 0;
+
+   for (int i = 1; i <= number; i++)
+   {
+      if (number % i == 0)
+      {
+         count++;
+      }
+   }
+
+   return count;
+}

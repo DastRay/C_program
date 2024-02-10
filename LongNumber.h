@@ -1,16 +1,14 @@
 #pragma once
 
-/*
 typedef struct NongNumber
 {
 	unsigned char* digits;
 	unsigned int lenght;
 } LongNumber;
-*/
 
 /*
-* @breaf сумма двух больших чисел
-* @param n1_ - первое складываемое число, n2_ - второе складываемое число
-* @return сумма n1_ и n2_
+* @breaf СЃСѓРјРјР° РґРІСѓС… Р±РѕР»СЊС€РёС… С‡РёСЃРµР»
+* @param n1_ - РїРµСЂРІРѕРµ СЃРєР»Р°РґС‹РІР°РµРјРѕРµ С‡РёСЃР»Рѕ, n2_ - РІС‚РѕСЂРѕРµ СЃРєР»Р°РґС‹РІР°РµРјРѕРµ С‡РёСЃР»Рѕ
+* @return СЃСѓРјРјР° n1_ Рё n2_
 */
-//LongNumber* Sum(const LongNumber* n_1, const LongNumber* n_2);
+LongNumber* Sum(const LongNumber* n_1, const LongNumber* n_2);
