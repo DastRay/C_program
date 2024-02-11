@@ -141,6 +141,28 @@ unsigned long long int Problem_7(const int number)
    return num - 1;
 }
 
+unsigned long long int Problem_8(const char* nums, const unsigned int count)
+{
+
+   unsigned long long int maxRes = 0;
+   unsigned long long int res = 1;
+
+   for (int i = 0; i < strlen(nums) - 3; i++)
+   {
+      res *= nums[i] - '0';
+
+      for (int j = 1; j < count; j++)
+      {
+         res *= nums[i + j] - '0';
+      }
+
+      maxRes = max(maxRes, res);
+      res = 1;
+   }
+
+   return maxRes;
+}
+
 unsigned int Problem_9()
 {
    for (int a = 1; a < 1000; a++)
@@ -198,6 +220,15 @@ unsigned long long int Problem_10(const unsigned long long int number)
    }
 
    return sum;
+}
+
+unsigned long long int Problem_11(const char* nameFile, const char* mode, const int rows, const int cols, const unsigned int count)
+{
+   int** matrix = readMatrixFromFile(nameFile, mode, rows, cols);
+
+   unsigned long long int result = maxProductInTable(matrix, rows, cols);
+
+   return result;
 }
 
 unsigned long long int Problem_12(const int num_div)

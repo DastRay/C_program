@@ -50,6 +50,14 @@ unsigned long long Problem_6(const unsigned int n_);
 unsigned long long int Problem_7(const int number);
 
 /**
+ * @brief нахождение наибольшего произведения n последовательных цифр в k-значном числе
+ * @param nums k-значное число
+ * @param count количество последовательных цифр
+ * @return наибольшее произведение n последовательных цифр в k-значном числе
+*/
+unsigned long long int Problem_8(const char* nums, const unsigned int count);
+
+/**
  * @brief Тройка Пифагора - три натуральных числа a < b < c, для которых выполняется равенство a2 + b2 = c2.
  * Существует только одна тройка Пифагора, для которой a + b + c = 1000.
  * @return произведение abc
@@ -70,6 +78,17 @@ unsigned int Problem_9_1();
 */
 unsigned long long int Problem_10(const unsigned long long int number);
 
+/**
+ * @brief Найти наибольшее произведение k подряд идущих чисел в таблице n×m, расположенных в любом направлении (вверх, вниз, вправо, влево или по диагонали)
+ * @param nameFile имя файла из котрого считывается таблица
+ * @param mode разрешение для открытия файла
+ * @param rows количество строк в таблице
+ * @param cols количество столбцов в таблице
+ * @param count количество чисел идущих подряд (если ввести число отличное от 4 скорее всего будет неверный ответ)
+ * @return наибольшее произведение k подряд идущих чисел в таблице n×m, расположенных в любом направлении
+*/
+unsigned long long int Problem_11(const char* nameFile, const char* mode, const int rows, const int cols, const unsigned int count);
+
 /** 
  * @brief нахождение первого треугольного числа, у которого более n делителей
  * @param num_div количество делителей
@@ -77,5 +96,7 @@ unsigned long long int Problem_10(const unsigned long long int number);
  */
 unsigned long long int Problem_12(const int num_div);
 
-
+/**
+ * @brief Найдите первые десять цифр суммы следующих ста 50-значных чисел.
+*/
 void Problem_13();
